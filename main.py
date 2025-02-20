@@ -144,12 +144,12 @@ def withdraw_request(message):
             bot.reply_to(msg, e.detail)
 
 import threading
+import uvicorn
 
 def start_bot():
-    bot.polling()
+    bot.polling(none_stop=True)
 
 threading.Thread(target=start_bot, daemon=True).start()
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
