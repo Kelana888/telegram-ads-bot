@@ -15,7 +15,7 @@ referrals = {}
 transactions = {}
 withdraw_requests = {}
 
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+BOT_TOKEN = "7725713610:AAHhgOUkBRH1Xa1SCbiIzhQdrTk9F8ie4zI"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 class User(BaseModel):
