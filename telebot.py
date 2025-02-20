@@ -143,4 +143,9 @@ def withdraw_request(message):
         except HTTPException as e:
             bot.reply_to(msg, e.detail)
 
-bot.polling()
+import threading
+
+def start_bot():
+    bot.polling()
+
+threading.Thread(target=start_bot, daemon=True).start()
